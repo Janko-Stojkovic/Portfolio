@@ -15,6 +15,7 @@ span {
 body {
   background-color: #dcdcdc;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 html {
@@ -166,6 +167,7 @@ nav {
   background-position: center;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 
   &::after {
     content: '';
