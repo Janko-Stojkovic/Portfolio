@@ -13,6 +13,7 @@ span {
 body {
   background-color: #dcdcdc;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 html {
@@ -158,20 +159,6 @@ nav {
 .nav-active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-}
-
-.toggle .line1 {
-  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
-          transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  -webkit-transform: rotate(45deg) translate(-5px, -6px);
-          transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* End Header section*/
@@ -397,10 +384,6 @@ nav {
   margin: 0 auto;
 }
 
-#project-sec .project-title h1 {
-  margin-bottom: 50px;
-}
-
 #project-sec .project {
   padding-top: 160px;
 }
@@ -410,6 +393,10 @@ nav {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 100px;
+}
+
+#project-sec .project-title h1 {
+  margin-bottom: 50px;
 }
 
 #project-sec .project-title h1 span {
@@ -457,6 +444,8 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
   width: 80%;
   margin: 20px auto;
   overflow: hidden;
@@ -549,6 +538,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: yellow;
 }
 
 #about-sec .col-left {

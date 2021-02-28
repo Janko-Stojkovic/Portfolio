@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
 $span: #ff7803;
+$bela: white;
+@mixin h1 {
+  margin-bottom: 50px;
+}
+@mixin wrapper {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 * {
   padding: 0;
@@ -26,7 +38,7 @@ html {
 
 a {
   text-decoration: none;
-  color: white;
+  color: $bela;
   list-style: none;
 }
 
@@ -44,9 +56,6 @@ a {
 .asd {
   color: #dcdcdc;
 }
-
-
-
 nav {
   position: fixed;
   top: 0;
@@ -141,22 +150,6 @@ nav {
   transform: translateX(0%);
 }
 
-
-.toggle {
-  .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .line2 {
-    opacity: 0;
-  }
-
-  .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-}
-
-
 /* End Header section*/
 
 /* Main section */
@@ -167,7 +160,6 @@ nav {
   background-position: center;
   position: relative;
   z-index: 1;
-  overflow-x: hidden;
 
   &::after {
     content: '';
@@ -182,7 +174,7 @@ nav {
   }
 
   h1 {
-    font-size: 35px;
+    font-size: 40px;
     color: transparent;
     position: relative;
     width: fit-content;
@@ -227,7 +219,7 @@ nav {
   }
 
   .btn {
-    color: white;
+    color: $bela;
     padding: 10px 30px;
     border: 2px solid $span;
     display: inline-block;
@@ -237,7 +229,7 @@ nav {
     margin-top: 20px;
 
     &:hover {
-      color: white;
+      color: $bela;
       background-color: $span;
       transition: .3s;
     }
@@ -260,9 +252,8 @@ nav {
   .skill-title {
     max-width: 500px;
     margin: 0 auto;
-
     h1 {
-      margin-bottom: 50px;
+      @include h1;
 
       span {
         color:$span;
@@ -332,13 +323,13 @@ nav {
 
     h2 {
       font-size: 2rem;
-      color: white;
+      color: $bela;
       margin-bottom: 10px;
       text-transform: uppercase;
     }
 
     p {
-      color: white;
+      color: $bela;
       text-align: left;
     }
   }
@@ -351,10 +342,6 @@ nav {
 #project-sec {
 width: 100%;
 margin: 0 auto;
-  .project-title h1 {
-    margin-bottom: 50px;
-  }
-
   .project {
     padding-top: 160px;
   }
@@ -365,8 +352,12 @@ margin: 0 auto;
     text-align: center;
     margin-bottom: 100px;
 
-    h1 span {
-      color: $span;
+    h1 {
+      @include h1;
+
+      span {
+        color: $span;
+      }
     }
 
     p {
@@ -380,19 +371,11 @@ margin: 0 auto;
   }
 
   .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
+    @include wrapper;
   }
 
   .project-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @include wrapper;
     width: 80%;
     margin: 20px auto;
     overflow: hidden;
@@ -466,6 +449,7 @@ margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: yellow;
   }
 
   .col-left {
@@ -616,7 +600,7 @@ footer {
 }
 
 .copyright {
-  color: white;
+  color: $bela;
   text-align: center;
   font-size: 15px;
 }
@@ -638,7 +622,7 @@ footer {
 
 @keyframes text_reveal {
   100% {
-    color: white;
+    color: $bela;
   }
 }
 
