@@ -78,10 +78,19 @@
     .logo{
         letter-spacing: 0;
     }
+    #main .main-sec h1{
+        font-size: 30px;
+    }
 }
-@media only screen and (max-width: 337px){
+@media only screen and (max-width: 347px){
     .logo a h1 {
         font-size: 17px;
+    }
+    #main .main-sec h1{
+        font-size: 27px;
+    }
+    #main .main-sec a{
+        font-size: 13px;
     }
 }
 @media only screen and (min-width: 769px) {
