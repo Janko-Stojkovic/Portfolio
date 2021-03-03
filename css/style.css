@@ -344,8 +344,8 @@ nav {
 }
 
 #skill-sec .skill-item:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-animation: jiggle .5s ease forwards;
+          animation: jiggle .5s ease forwards;
 }
 
 #skill-sec .skill-item .icon {
